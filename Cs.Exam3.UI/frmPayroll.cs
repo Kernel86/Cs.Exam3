@@ -71,6 +71,8 @@ namespace Cs.Exam3.UI
                     }
                     else if (btnAdd.Text == "Update")
                     {
+                        oPayrolls.Items[dgvPayroll.CurrentRow.Index].EmployeeId = txtEmployeeId.Text;
+                        oPayrolls.Items[dgvPayroll.CurrentRow.Index].CheckNo = int.Parse(txtCheckNo.Text);
                         oPayrolls.Items[dgvPayroll.CurrentRow.Index].CheckDate = dtCheckDate.Value;
                         oPayrolls.Items[dgvPayroll.CurrentRow.Index].CheckAmount = decimal.Parse(txtCheckAmount.Text);
                         oPayrolls.Items[dgvPayroll.CurrentRow.Index].HoursWorked = decimal.Parse(txtHoursWorked.Text);
